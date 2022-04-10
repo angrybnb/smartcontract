@@ -580,7 +580,7 @@ contract AngryBNB is IBEP20, Auth {
         autoLiquidityReceiver = msg.sender;
         marketingFeeReceiver = 0xc9AfDdDC0d75c7f69Dd524aaEc8a52dff7D7D19D; 
         devFeeReceiver = 0x0B82A454683b71F2F97874d3aBdC162f295E3774;
-	  appFeeReceiver = 0xE4cF0549eFE492bA3F3F56914968e59eCe13fe48;
+	appFeeReceiver = 0xE4cF0549eFE492bA3F3F56914968e59eCe13fe48;
 
         _rBalance[msg.sender] = rSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
