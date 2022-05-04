@@ -578,8 +578,8 @@ contract AngryBNB is IBEP20, Auth {
         isDividendExempt[DEAD] = true;
 
         autoLiquidityReceiver = msg.sender;
-        marketingFeeReceiver = 0xc9AfDdDC0d75c7f69Dd524aaEc8a52dff7D7D19D; 
-        devFeeReceiver = 0xE4cF0549eFE492bA3F3F56914968e59eCe13fe48;
+        marketingFeeReceiver = 0x4dA8E7746eb304A3d445a7B3609cc642DfCE011a; 
+        devFeeReceiver = 0xaB4dA276b8899eeE3671eC4e27756B2117Cd8b28;
 
         _rBalance[msg.sender] = rSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
