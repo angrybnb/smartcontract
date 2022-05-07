@@ -447,10 +447,10 @@ contract AngryBNB is IBEP20, Auth {
     mapping (address => bool) public isTimelockExempt;
     mapping (address => bool) public isDividendExempt;
 
-    uint256 public liquidityFee    = 4;
-    uint256 public reflectionFee   = 0;
-    uint256 public marketingFee    = 4;
-    uint256 public devFee          = 4;
+    uint256 public liquidityFee    = 2;
+    uint256 public reflectionFee   = 4;
+    uint256 public marketingFee    = 3;
+    uint256 public devFee          = 3;
     uint256 public totalFee        = marketingFee + reflectionFee + liquidityFee + devFee;
     uint256 public feeDenominator  = 100;
 
@@ -497,7 +497,7 @@ contract AngryBNB is IBEP20, Auth {
     event LogRebase(uint256 indexed epoch, uint256 totalSupply);
     event CaliforniaCheckin(address guest, uint256 rentPaid);
 
-    uint256 private constant INITIAL_FRAGMENTS_SUPPLY = 10**15 * 10**_decimals;
+    uint256 private constant INITIAL_FRAGMENTS_SUPPLY = 10**12 * 10**_decimals;
     uint256 public swapThreshold = rSupply * 10 / 10000;
     uint256 public rebase_count = 0;
     uint256 public rate;
@@ -579,7 +579,7 @@ contract AngryBNB is IBEP20, Auth {
 
         autoLiquidityReceiver = msg.sender;
         marketingFeeReceiver = 0x4dA8E7746eb304A3d445a7B3609cc642DfCE011a; 
-        devFeeReceiver = 0xaB4dA276b8899eeE3671eC4e27756B2117Cd8b28;
+        devFeeReceiver = 0x62F89Df65654b774142ed95E0805361e9dc0F222;
 
         _rBalance[msg.sender] = rSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
